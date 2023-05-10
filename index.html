@@ -19,8 +19,87 @@
 
 <body>
     <div class="home-page">
+        <section class="extra-cart">
+
+        </section>
+        <section class="login-out hide">
+            <p style="padding: 20px 0;">
+                <span class="login" id="login">login </span>
+                <span class="login"> / </span>
+                <span class="login" id="register"> register</span>
+            </p>
+            <form action="" method="get" id="form-login">
+                <table class="table-log">
+                    <tr>
+                        <td>
+                            <label for="gmail" class="label-log">Gmail:</label>
+                        </td>
+                        <td>
+                            <input type="email">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="password" class="label-log">password:</label>
+                        </td>
+                        <td>
+                            <input type="password" name="" id="">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td style="text-align: left; padding: 10px 0;">
+                            <input type="submit" id="log-submit" value="Login">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+            <form action="" method="get" id="form-register" class="hide">
+                <table class="table-log">
+                    <tr>
+                        <td>
+                            <label for="" class="label-log">User Name</label>
+                        </td>
+                        <td>
+                            <input type="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="gmail" class="label-log">Gmail:</label>
+                        </td>
+                        <td>
+                            <input type="email">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="password" class="label-log">password:</label>
+                        </td>
+                        <td>
+                            <input type="password" name="" id="">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="password" class="label-log">Repassword:</label>
+                        </td>
+                        <td>
+                            <input type="password" name="" id="">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td style="text-align: left; padding: 10px 0;">
+                            <input type="submit" id="log-register" value="register">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </section>
         <div class="setting">
-            <a href="./html/styleGuid.html" class="fa-solid fa-gear"></a>
+            <i class="log fa-sharp fa-solid fa-right-to-bracket" id="show-log"></i><br>
+            <a href="./html/styleGuid.html" class=" set fa-solid fa-gear"></a>
         </div>
         <header>
             <div class=" header">
@@ -32,33 +111,37 @@
                         <ul class="list-menu">
                             <li id="menu-item" class="menu-item active"><a href="./index.html">Home</a></li>
                             <li class="menu-item"><a class="menu-item " href="./html/about.html">About</a></li>
-                            <li class="menu-item"><a class="menu-item" href="#">Pages</a></li>
-                            <li class="menu-item"><a class="menu-item" href="#">Shop</a></li>
-                            <li class="menu-item"><a class="menu-item" href="#">Projects</a></li>
-                            <li class="menu-item"><a class="menu-item" href="#">News</a></li>
+                            <li class="menu-item"><a class="menu-item" href="./html/page.html">Pages</a></li>
+                            <li class="menu-item"><a class="menu-item" href="./html/Shop.html">Shop</a></li>
+                            <li class="menu-item"><a class="menu-item" href="./html/projects.html">Projects</a></li>
+                            <li class="menu-item"><a class="menu-item" href="./html/new.html">News</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="center header-right">
                     <div class="center box-search">
                         <div class="in-search">
-                            <input type="search" class="find" placeholder="Enter keyword to search...">
-                            <button class="icon-search">
+                            <input id="data" type="search" class="find" placeholder="Enter keyword to search...">
+                            <button class="icon-search" id="search">
                                 <i class="fa-solid fa-magnifying-glass"></i>
                             </button>
                         </div>
 
                     </div>
-                    <div class="box-cart">
-                        <!-- <span class="icon-cart">
+                    <a href="./html/cart.html">
+                        <div class="box-cart">
+                            <!-- <span class="icon-cart">
                         </span> -->
-                        <i class="fa-solid fa-cart-shopping"></i>
-                        Cart(<span id="cart">0</span>)
-                    </div>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            Cart(<span id="cart">0</span>)
+                        </div>
+                    </a>
                 </div>
             </div>
         </header>
-
+        <section class="show-product hide">
+            <!-- <button id="hide"><i class="fa-solid fa-xmark"></i></button> -->
+        </section>
         <main class="container">
             <div class="banana">
                 <div class="bg-img">
@@ -91,6 +174,41 @@
                     <img src="./img/otherbanner1 (1).png" alt="">
                 </div>
             </div>
+            <section class="bg-rotating">
+                <div class="time">
+                    <p>FLASH SALE (
+                        hour:
+                        <span id="hour">0</span>
+                        minute:
+                        <span id="minute">34</span>
+                        second:
+                        <span id="second">0</span>)<br><br>
+                    </p>
+                    <button id="run" style="visibility: hidden;"></button>
+                </div>
+                <div class="rotating-box">
+                    <div class="single-rb">
+                        <div class="front-side">
+                            <img src="./img/product/Photo 0.png" alt="">
+                        </div>
+                        <div class="back-side">
+                            <img src="./img/product/Photo 1.png" alt="">
+                        </div>
+                        <div class="left-side">
+                            <img src="./img/product/photo 3.png" alt="">
+                        </div>
+                        <div class="right-side">
+                            <img src="./img/product/photo 4.png" alt="">
+                        </div>
+                        <div class="top-side">
+                            <img src="./img/product/photo 5.png" alt="">
+                        </div>
+                        <div class="bottom-side">
+                            <img src="./img/product/photo 6.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </section>
             <section class="about">
                 <div class="about-img">
                     <img src="./img/Photo.png" alt="">
@@ -127,13 +245,13 @@
                     <h1>Our Products</h1>
                 </div>
                 <div class="shop-product">
-                    <div class="product">
+                    <div class="product" data-product="banana">
                         <button class="btn-product">Vegetable</button>
                         <img class="prd-img" src="./img/product/Photo 0.png" alt="">
                         <div class="product-hover">
-                            <i class="fa-solid fa-plus"></i>
-                            <i class="fa-solid fa-minus"></i>
-                            <i class="fa-sharp fa-solid fa-info"></i>
+                            <i class="fa-solid fa-plus add-cart"></i>
+                            <i class="fa-solid fa-minus remove-cart"></i>
+                            <i class="fa-sharp fa-solid fa-info check-info"></i>
                         </div>
                         <h3 class="name-product">Calabrese Broccoli</h3>
                         <div class="cost-Evaluate">
@@ -141,13 +259,13 @@
                             <img class="evaluate" src="./img/Star.png" alt="">
                         </div>
                     </div>
-                    <div class="product">
+                    <div class="product" data-product="banana">
                         <button class="btn-product">Fresh</button>
                         <img class="prd-img" src="./img/product/Photo 1.png" alt="">
                         <div class="product-hover">
-                            <i class="fa-solid fa-plus"></i>
-                            <i class="fa-solid fa-minus"></i>
-                            <i class="fa-sharp fa-solid fa-info"></i>
+                            <i class="fa-solid fa-plus add-cart"></i>
+                            <i class="fa-solid fa-minus remove-cart"></i>
+                            <i class="fa-sharp fa-solid fa-info check-info"></i>
                         </div>
                         <h3 class="name-product">Fresh Banana Fruites</h3>
                         <div class="cost-Evaluate">
@@ -155,13 +273,13 @@
                             <img class="evaluate" src="./img/Star.png" alt="">
                         </div>
                     </div>
-                    <div class="product">
+                    <div class="product" data-product="banana">
                         <button class="btn-product">Millets</button>
                         <img class="prd-img" src="./img/product/Photo 2.png" alt="">
                         <div class="product-hover">
-                            <i class="fa-solid fa-plus"></i>
-                            <i class="fa-solid fa-minus"></i>
-                            <i class="fa-sharp fa-solid fa-info"></i>
+                            <i class="fa-solid fa-plus add-cart"></i>
+                            <i class="fa-solid fa-minus remove-cart"></i>
+                            <i class="fa-sharp fa-solid fa-info check-info"></i>
                         </div>
                         <h3 class="name-product">White Nuts</h3>
                         <div class="cost-Evaluate">
@@ -169,13 +287,13 @@
                             <img class="evaluate" src="./img/Star.png" alt="">
                         </div>
                     </div>
-                    <div class="product">
+                    <div class="product" data-product="banana">
                         <button class="btn-product">Vegetable</button>
                         <img class="prd-img" src="./img/product/Photo 3.png" alt="">
                         <div class="product-hover">
-                            <i class="fa-solid fa-plus"></i>
-                            <i class="fa-solid fa-minus"></i>
-                            <i class="fa-sharp fa-solid fa-info"></i>
+                            <i class="fa-solid fa-plus add-cart"></i>
+                            <i class="fa-solid fa-minus remove-cart"></i>
+                            <i class="fa-sharp fa-solid fa-info check-info"></i>
                         </div>
                         <h3 class="name-product">Vegan Red Tomato</h3>
                         <div class="cost-Evaluate">
@@ -183,13 +301,13 @@
                             <img class="evaluate" src="./img/Star.png" alt="">
                         </div>
                     </div>
-                    <div class="product">
+                    <div class="product" data-product="banana">
                         <button class="btn-product">Health</button>
                         <img class="prd-img" src="./img/product/Photo 4.png" alt="">
                         <div class="product-hover">
-                            <i class="fa-solid fa-plus"></i>
-                            <i class="fa-solid fa-minus"></i>
-                            <i class="fa-sharp fa-solid fa-info"></i>
+                            <i class="fa-solid fa-plus add-cart"></i>
+                            <i class="fa-solid fa-minus remove-cart"></i>
+                            <i class="fa-sharp fa-solid fa-info check-info"></i>
                         </div>
                         <h3 class="name-product">Mung Bean</h3>
                         <div class="cost-Evaluate">
@@ -197,13 +315,13 @@
                             <img class="evaluate" src="./img/Star.png" alt="">
                         </div>
                     </div>
-                    <div class="product">
+                    <div class="product" data-product="banana">
                         <button class="btn-product">Nuts</button>
                         <img class="prd-img" src="./img/product/Photo 5.png" alt="">
                         <div class="product-hover">
-                            <i class="fa-solid fa-plus"></i>
-                            <i class="fa-solid fa-minus"></i>
-                            <i class="fa-sharp fa-solid fa-info"></i>
+                            <i class="fa-solid fa-plus add-cart"></i>
+                            <i class="fa-solid fa-minus remove-cart"></i>
+                            <i class="fa-sharp fa-solid fa-info check-info"></i>
                         </div>
                         <h3 class="name-product">Brown Hazelnut</h3>
                         <div class="cost-Evaluate">
@@ -211,13 +329,13 @@
                             <img class="evaluate" src="./img/Star.png" alt="">
                         </div>
                     </div>
-                    <div class="product">
+                    <div class="product" data-product="banana">
                         <button class="btn-product">Fresh</button>
                         <img class="prd-img" src="./img/product/Photo 6.png" alt="">
                         <div class="product-hover">
-                            <i class="fa-solid fa-plus"></i>
-                            <i class="fa-solid fa-minus"></i>
-                            <i class="fa-sharp fa-solid fa-info"></i>
+                            <i class="fa-solid fa-plus add-cart"></i>
+                            <i class="fa-solid fa-minus remove-cart"></i>
+                            <i class="fa-sharp fa-solid fa-info check-info"></i>
                         </div>
                         <h3 class="name-product">Eggs</h3>
                         <div class="cost-Evaluate">
@@ -225,13 +343,13 @@
                             <img class="evaluate" src="./img/Star.png" alt="">
                         </div>
                     </div>
-                    <div class="product">
+                    <div class="product" data-product="banana">
                         <button class="btn-product">Fresh</button>
                         <img class="prd-img" src="./img/product/Photo 7.png" alt="">
                         <div class="product-hover">
-                            <i class="fa-solid fa-plus"></i>
-                            <i class="fa-solid fa-minus"></i>
-                            <i class="fa-sharp fa-solid fa-info"></i>
+                            <i class="fa-solid fa-plus add-cart"></i>
+                            <i class="fa-solid fa-minus remove-cart"></i>
+                            <i class="fa-sharp fa-solid fa-info check-info"></i>
                         </div>
                         <h3 class="name-product">Zelco Suji Elaichi Rusk</h3>
                         <div class="cost-Evaluate">
@@ -294,13 +412,13 @@
                         <button class="btn-offer">View All Product</button>
                     </div>
                     <div class="offer-child-bottom">
-                        <div class="product">
+                        <div class="product" data-product="banana">
                             <button class="btn-product">Fresh</button>
                             <img class="prd-img" src="./img/pt1.png" alt="">
                             <div class="product-hover">
-                                <i class="fa-solid fa-plus"></i>
-                                <i class="fa-solid fa-minus"></i>
-                                <i class="fa-sharp fa-solid fa-info"></i>
+                                <i class="fa-solid fa-plus add-cart"></i>
+                                <i class="fa-solid fa-minus remove-cart"></i>
+                                <i class="fa-sharp fa-solid fa-info check-info"></i>
                             </div>
                             <h3 class="name-product">Mung Bean</h3>
                             <div class="cost-Evaluate">
@@ -309,13 +427,13 @@
                                 <img class="evaluate" src="./img/Star.png" alt="">
                             </div>
                         </div>
-                        <div class="product">
+                        <div class="product" data-product="">
                             <button class="btn-product">Fresh</button>
                             <img class="prd-img" src="./img/pt2.png" alt="">
                             <div class="product-hover">
-                                <i class="fa-solid fa-plus"></i>
-                                <i class="fa-solid fa-minus"></i>
-                                <i class="fa-sharp fa-solid fa-info"></i>
+                                <i class="fa-solid fa-plus add-cart"></i>
+                                <i class="fa-solid fa-minus remove-cart"></i>
+                                <i class="fa-sharp fa-solid fa-info check-info"></i>
                             </div>
                             <h3 class="name-product">Brown Hazelnut</h3>
                             <div class="cost-Evaluate">
@@ -324,13 +442,13 @@
                                 <img class="evaluate" src="./img/Star.png" alt="">
                             </div>
                         </div>
-                        <div class="product">
+                        <div class="product" data-product="">
                             <button class="btn-product">Fresh</button>
                             <img class="prd-img" src="./img/pt3.png" alt="">
                             <div class="product-hover">
-                                <i class="fa-solid fa-plus"></i>
-                                <i class="fa-solid fa-minus"></i>
-                                <i class="fa-sharp fa-solid fa-info"></i>
+                                <i class="fa-solid fa-plus add-cart"></i>
+                                <i class="fa-solid fa-minus remove-cart"></i>
+                                <i class="fa-sharp fa-solid fa-info check-info"></i>
                             </div>
                             <h3 class="name-product">Onion</h3>
                             <div class="cost-Evaluate">
@@ -339,13 +457,13 @@
                                 <img class="evaluate" src="./img/Star.png" alt="">
                             </div>
                         </div>
-                        <div class="product">
+                        <div class="product" data-product="">
                             <button class="btn-product">Fresh</button>
                             <img class="prd-img" src="./img/pt4.png" alt="">
                             <div class="product-hover">
-                                <i class="fa-solid fa-plus"></i>
-                                <i class="fa-solid fa-minus"></i>
-                                <i class="fa-sharp fa-solid fa-info"></i>
+                                <i class="fa-solid fa-plus add-cart"></i>
+                                <i class="fa-solid fa-minus remove-cart"></i>
+                                <i class="fa-sharp fa-solid fa-info check-info"></i>
                             </div>
                             <h3 class="name-product">Cabbage</h3>
                             <div class="cost-Evaluate">
@@ -430,7 +548,23 @@
                     </div>
                 </div>
             </section>
-              <iframe id="map"
+            <!-- <section class="adver">
+                <div class="adver-l">
+                    <iframe width="900" height="506" src="https://www.youtube.com/embed/bXsyxIcb1wc"
+                        title="Playlist 1 Hour | MASHUP hơn 10 bài HOT trên Tik Tok P1, P2, P3, P4 - Changmie x Tiến Tới x Ca Ca"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="adver-r">
+                    <iframe width="900" height="506" src="https://www.youtube.com/embed/oPd2o9FlKmg"
+                        title="Thu âm quảng cáo cửa hàng hoa quả Chú Béo Food MC đọc phát loa 0967882206"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+            </section> -->
+            <iframe id="map"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7449.913154139674!2d105.86274504122575!3d20.994377672585177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ac1b32177d79%3A0xde093f29474d98c8!2zS2h1IMSRw7QgdGjhu4sgVGltZXMgQ2l0eSwgVsSpbmggVHV5LCBIYWkgQsOgIFRyxrBuZywgSMOgIE7hu5lpLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1682064667959!5m2!1svi!2s"
                 width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -445,7 +579,7 @@
                     </div>
                 </div>
             </section>
-          
+
         </main>
         <footer class="footer">
             <div class="footer-left">

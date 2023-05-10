@@ -1,8 +1,33 @@
+$("#show-log").on('click',function(){
+    let log = $(".login-out");
+    if(log.hasClass("hide")){
+        log.removeClass("hide")
+    }else{
+        log.addClass("hide")
+    }
+})
+$("#login").on('click',function(){
+    $("#login").css('color','red')
+    $("#register").css('color','black')
+    $("#form-register").addClass("hide");
+    $("#form-login").removeClass("hide");
+})
+$("#register").on('click',function(){
+    $("#login").css('color','black')
+    $("#register").css('color','red')
+    $("#form-login").addClass("hide");
+    $("#form-register").removeClass("hide");
+
+})
 $(".menu-item").on('click',function(){
     let val = $(this);
     $(".menu-item").removeClass("active");
     val.addClass("active");
 })
+$("#more").on('click',function(){
+    $(".shop-product2").removeClass("hide");
+})
+
 // import { useState } from 'react'
 // const [color,setColor] = useState("#274C5B");
 $(".btn-color").on('click',function(){
@@ -35,3 +60,62 @@ $(".font").on('click',function(){
 
 //     $("body").css("font-family","'" + $(this).text() + "'")
 // })
+//////////////////////////////////////////////
+/*SEACH PRODUCT */
+const products = $(".product");
+const data = $("#data");
+function seach(){
+        products.each(function(index,item){
+        let varC = $(this);
+        let dataSearch = data.val().toUpperCase();
+        let dataProduct = varC.attr("data-product").toUpperCase();
+        const currentHtml = $(".show-product");
+        let newItem = varC.clone(true);
+        if(dataSearch === dataProduct){
+            currentHtml.removeClass("hide")
+            currentHtml.html(" ");
+            $("#hide").show();
+            currentHtml.append(`<button id="hide"><i class="fa-solid fa-xmark"></i></button>`)
+            currentHtml.append( "<h1>Sản phẩm bạn cần tìm là:</h1>")
+            currentHtml.append(newItem)
+            console.log(varC);
+            console.log(newItem);
+        }else if (dataSearch !== dataProduct) {
+            // currentHtml.html('')
+            // currentHtml.append("<h1>Rất tiếc chúng tôi không có sản phẩn bạn cần tìm</h1>")
+            // console.log("lose");
+        }
+    })
+}
+$(".show-product").on('click',function(){
+    $(".show-product").html(" ");
+    data.val(" ");
+    $(".show-product").addClass("hide");
+})
+$("#search").on('click',function(){
+    seach();
+    data.val(" ")
+})
+data.on('keyup',function(event){
+    const keyCode = event.keyCode;
+    if(keyCode === 13){
+        seach();
+         data.val(" ")
+
+    }
+    // console.log(keyCode);
+});
+
+// function addItem(){
+
+//     const value = $("").val();
+//     // const newElement = `<li class="list-item"> ${value} </li>`;
+//     const newHml = currentHtml + newElement;
+//     if(value){
+//         $(".list").html(newHml);
+//         $(".name-Student").val('');
+//     }
+
+// }
+
+

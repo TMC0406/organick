@@ -21,9 +21,10 @@
     position: relative;
     border: 1px solid;
     border-radius: 10px;
-    padding: 5px;
+    padding: 5px 5px 20px;
     overflow: hidden;
     box-shadow: 1px 15px 30px;
+    position: relative;
 }
 .product:hover{
     transform: scale(1.1);
@@ -51,10 +52,19 @@
     display: flex;
     justify-content: space-between;
     padding: 0 5px;
+    position: absolute;
+    bottom: 0;
+}
+.cost{
+    font-size: 1.1rem;
 }
 .cost1{
     color: #8fa4ad;
     text-decoration:line-through;
+}
+.cost2{
+    color: #000000;
+    font-weight: 900;
 }
 .product-hover{
     width: 100%;
@@ -78,7 +88,7 @@
     font-size: 0.8rem;
     color: #f1ebeb;
     padding: 20px;
-    margin: 5px;
+    margin: 1px;
     border-radius: 10rem;
     background-color: rgba(102, 102, 102, 0.4);
     font-weight: 800;
@@ -110,12 +120,30 @@
     border-radius: 10px;
     font-weight: 800;
 }
+.show-product{
+    padding: 20px;
+    margin: 20px 0;
+    display: grid;
+    grid-template-columns: auto  auto auto auto;
+    position: relative;
+}
+#hide{
+    /* display: none; */
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 20%;
+    top: 20px;
+    border-radius: 10rem;
+    background: #000;
+    color: floralwhite;
+}
 @media screen and (max-width:1023px) and (min-width:768px) {
     .shop{
         width: 95%;
-        display: flex;
+        /* display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: center; */
     }
     .product{
         /* width: 70%; */
@@ -145,7 +173,7 @@
         font-size: 1.5rem;
         color: #f1ebeb;
         padding: 20px;
-        margin: 10px;
+        margin: 1px;
     }
     .shop-product{
         display: grid;

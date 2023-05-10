@@ -35,3 +35,29 @@ btnNext.on('click',function(){
 // }
 // changeBg()
 
+
+let hour = $("#hour")
+let minute =$("#minute");
+let second = $("#second");
+let btnPre = $("#run");
+let c1 = 0;
+let c2 = 1;
+let c3 = 1;
+function time2(){
+        $('#run').click();
+}
+btnPre.on('click',function(){
+    if(c2 > 60){
+        hour.text(c3++);
+        c2 = 0
+    }
+    if(c1 > 60){
+        minute.text(c2++);
+        c1 = 0;
+    }else{
+        second.text(c1++);
+    }
+})
+window.setInterval(function() {
+    time2();
+}, 700);

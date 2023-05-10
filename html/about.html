@@ -15,13 +15,89 @@
     <link rel="stylesheet" href="../css/styleGuid.css">
     <link rel="stylesheet" href="../css/shared.css">
     <link rel="stylesheet" href="../css/about.css">
-    <title>Style Guid.COM</title>
+    <title>About Us</title>
 </head>
 
 <body>
     <div class="home-page">
+        <section class="login-out hide">
+            <p style="padding: 20px 0;">
+                <span class="login" id="login">login </span>
+                <span class="login"> / </span>
+                <span class="login" id="register"> register</span>
+            </p>
+            <form action="" method="get" id="form-login">
+                <table class="table-log">
+                    <tr>
+                        <td>
+                            <label for="gmail" class="label-log">Gmail:</label>
+                        </td>
+                        <td>
+                            <input type="email">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="password" class="label-log">password:</label>
+                        </td>
+                        <td>
+                            <input type="password" name="" id="">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td style="text-align: left; padding: 10px 0;">
+                            <input type="submit" id="log-submit" value="Login">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+            <form action="" method="get" id="form-register" class="hide">
+                <table  class="table-log">
+                    <tr>
+                        <td>
+                            <label for="" class="label-log">User Name</label>
+                        </td>
+                        <td>
+                            <input type="text">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="gmail" class="label-log">Gmail:</label>
+                        </td>
+                        <td>
+                            <input type="email">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="password" class="label-log">password:</label>
+                        </td>
+                        <td>
+                            <input type="password" name="" id="">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="password" class="label-log">Repassword:</label>
+                        </td>
+                        <td>
+                            <input type="password" name="" id="">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td style="text-align: left; padding: 10px 0;">
+                            <input type="submit" id="log-register" value="register">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </section>
         <div class="setting">
-            <a href="./html/styleGuid.html" class="fa-solid fa-gear"></a>
+            <i class="log fa-sharp fa-solid fa-right-to-bracket" id="show-log"></i><br>
+            <a href="./html/styleGuid.html" class=" set fa-solid fa-gear"></a>
         </div>
         <header>
             <div class=" header">
@@ -32,9 +108,9 @@
                     <div class="menu">
                         <ul class="list-menu">
                             <li id="menu-item" class="menu-item "><a href="../index.html">Home</a></li>
-                            <li class="menu-item"><a class="menu-item active" href="#">About</a></li>
-                            <li class="menu-item"><a class="menu-item" href="#">Pages</a></li>
-                            <li class="menu-item"><a class="menu-item" href="#">Shop</a></li>
+                            <li class="menu-item"><a class="menu-item active" href="./about.html">About</a></li>
+                            <li class="menu-item"><a class="menu-item" href="./page.html">Pages</a></li>
+                            <li class="menu-item"><a class="menu-item" href="./Shop.html">Shop</a></li>
                             <li class="menu-item"><a class="menu-item" href="#">Projects</a></li>
                             <li class="menu-item"><a class="menu-item" href="#">News</a></li>
                         </ul>
@@ -42,25 +118,168 @@
                 </div>
                 <div class="center header-right">
                     <div class="center box-search">
-                        <div class="in-search">
+                        <a href="./Shop.html"><div class="in-search">
                             <input type="search" class="find" placeholder="Enter keyword to search...">
                             <button class="icon-search">
                                 <i class="fa-solid fa-magnifying-glass"></i>
                             </button>
-                        </div>
-
+                        </div></a>
                     </div>
-                    <div class="box-cart">
+                    <a href="./cart.html"><div class="box-cart">
                         <!-- <span class="icon-cart">
                         </span> -->
                         <i class="fa-solid fa-cart-shopping"></i>
                         Cart(<span id="cart">0</span>)
-                    </div>
+                    </div></a>
                 </div>
             </div>
         </header>
-
+        <div class="bannar">
+            <img src="../img/about/Banner-ab.png" alt="">
+        </div>
         <main class="container">
+            <div class="why-us">
+                <div class="why-us-img">
+                    <img src="../img/about/why1.png" alt="">
+                </div>
+                <div class="why-us-content">
+                    <span class="o-t1" style="color: rgb(9, 255, 0); font-size:20px;">About!!</span><br>
+                    <h1  style="width:100%;">We do Creative Things for Success</h1>
+                    <p>Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</p>
+                    <p> Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</p>
+                    <div class="" style="display:flex ;">
+                        <img style="width:50%" src="../img/about/01.png" alt="">
+                        <img style="width:50%" src="../img/about/02.png" alt="">
+                    </div>
+                    <button class="btn-bottom">Explore More</button>
+                </div>
+            </div>
+            <section>
+                <div class="why-us">
+                    <div class="why-us-content">
+                        <span class="o-t1" style="color: rgb(9, 255, 0); font-size:20px;">Why Choose us?</span><br>
+                        <h1  style="width:100%;">We do not buy from the open market & traders.</h1>
+                        <p>Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industry's standard the 1500s, when an unknown.</p>
+                        <img style="height:100px ;" src="../img/about/1.png" alt="">
+                        <img style="height:100px  ;" src="../img/about/2.png" alt="">
+                    </div>
+                    <div class="why-us-img">
+                        <img src="../img/about/why2.png" alt="">
+                    </div>
+                </div>
+                <div class="why-container">
+                    <div class="why-box">
+                        <span><img src="../img/about/Icon.svg" alt=""></span>
+                        <h1>Return Policy</h1>
+                        <p>Simply dummy text of the printintypesetting industry.</p>
+                    </div>
+                    <div class="why-box">
+                        <span><img src="../img/about/Icon (1).svg" alt=""></span>
+                        <h1>100% Fresh</h1>
+                        <p>Simply dummy text of the printintypesetting industry.</p>
+                    </div>
+                    <div class="why-box">
+                        <span><img src="../img/about/Icon (2).svg" alt=""></span>
+                        <h1>Support 24/7</h1>
+                        <p>Simply dummy text of the printintypesetting industry.</p>
+                    </div>
+                    <div class="why-box">
+                        <span><img src="../img/about/Icon3.png" alt=""></span>
+                        <h1>Secured Payment</h1>
+                        <p>Simply dummy text of the printintypesetting industry.</p>
+                    </div>
+                </div>
+            </section>
+            <section class="teams">
+                <div class="teams-title">
+                    <span class="o-t1" style="color: rgb(9, 255, 0); font-size:20px;">Why Choose us?</span><br>
+                    <h1>Our Organic Experts</h1>
+                    <p >Simply dummy text of the printing and typesetting industry. Lorem had ceased to been the industry's  <br> standard dummy text ever since the 1500s, when an unknown printer took a galley.</p>
+                </div>
+                <div class="teams-group">
+                   <a href="./team.html"> <div class="group-person skew">
+                        <img src="../img/about/Image.png" alt="">
+                        <h3>Giovani Bacardo</h3>
+                        <div class="person-info">
+                            <span class="o-t1" style="color: rgb(9, 255, 0); ">Farmer</span><br>
+                            <span>
+                                <a href="" class="fa-brands fa-instagram"></a>
+                                <a href="" class="fa-brands fa-facebook"></a>
+                                <a href="" class="fa-brands fa-twitter"></a>
+                            </span>
+
+                        </div>
+                    </div></a>
+                    <a href="./team.html"><div class="group-person skew">
+                        <img src="../img/about/Image (1).png" alt="">
+                        <h3>Marianne Loreno</h3>
+                        <div class="person-info">
+                            <span class="o-t1" style="color: rgb(9, 255, 0); ">Farmer</span><br>
+                            <span>
+                                <a href="" class="fa-brands fa-instagram"></a>
+                                <a href="" class="fa-brands fa-facebook"></a>
+                                <a href="" class="fa-brands fa-twitter"></a>
+                            </span>
+                        </div></a>
+                    </div>
+                   <a href="./team.html"> <div class="group-person skew">
+                        <img src="../img/about/Image (2).png" alt="">
+                        <h3>Riga Pelore</h3>
+                        <div class="person-info">
+                            <span class="o-t1" style="color: rgb(9, 255, 0);">Designer</span><br>
+                            <span>
+                                <a href="" class="fa-brands fa-instagram"></a>
+                                <a href="" class="fa-brands fa-facebook"></a>
+                                <a href="" class="fa-brands fa-twitter"></a>
+                            </span>
+
+                        </div>
+                    </div></a>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
+            </section>
+            <section class="latteer">
+                <span class="o-t1" style="color: rgb(9, 255, 0);">About Us</span><br>
+                <h1>What We Offer for You</h1>
+                <div class="latteer-prd">
+                    <div class="latteer-box skew">
+                        <img src="../img/about/exp5.png" alt="">
+                        <span>Spicy</span>
+                    </div>
+                    <div class="latteer-box skew">
+                        <img src="../img/about/exp (1).png" alt="">
+                        <span>Nuts & Feesd</span>
+                    </div>                    
+                    <div class="latteer-box skew">
+                        <img src="../img/about/exp (2).png" alt="">
+                        <span>Fruits</span>
+                    </div>
+                    <div class="latteer-box skew">
+                        <img src="../img/about/exp (3).png" alt="">
+                        <span>Vegetable</span>
+                    </div>
+                </div>
+            </section>
 
             <section class="new">
                 <div class="new-center">
@@ -75,6 +294,7 @@
             </section>
         </main>
         <footer class="footer">
+            <h1></h1>
             <div class="footer-left">
                 <ul class="footer-left-link">
                     <li>
