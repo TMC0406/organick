@@ -125,7 +125,8 @@ img{
 .extra-cart{
     width: 18%;
     height: 100vh;
-    background-color: #d0d0d0;
+    background: rgb(255,255,255);
+    background: linear-gradient(163deg, rgba(255,255,255,1) 0%, rgba(0,25,59,1) 100%);
     position: fixed;
     z-index: 10000;
     right: 0;

@@ -158,21 +158,22 @@ $(".add-produce").on('click',function(){
     }
 })
 $(".remove-produce").on('click',function(){
-    // const value = $(this).attr("data-key");
-    // // console.log(value);
-    // for(let i = 0 ; i <= $(".product").length; i++){
-    //     const produce = $(".product")[i];
-    //     // console.log($(produce).attr("data-key")  );
-    //     if($(produce).attr("data-key") === value){
-    //         let newItem = $(produce).clone(true);
-    //         $(".extra-cart").disAppend(newItem);
-    //     console.log($(produce));
-    //     break;
-
-    //     }
-    // }
-    console.log($(".extra-cart"));
+    const value = $(this).attr("data-key");
+    // console.log(value);
+    for(let i = 0 ; i <= $(".product").length; i++){
+        const produce = $(".product")[i];
+        // console.log($(produce).attr("data-key")  );
+        if($(produce).attr("data-key") === value){
+            let newItem = $(produce).clone(true);
+            $(produce).hide();
+            $(".bb").hide();
+        console.log($(produce));
+        break;
+        }
+    }
+    // console.log($(".extra-cart"));
 })
 $("#sr-address-sb").on('click',function(){
     alert("you succeeded")
 })
+console.log($(".extra-cart"));
