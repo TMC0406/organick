@@ -118,4 +118,61 @@ data.on('keyup',function(event){
 
 // }
 
+// Get the button:
+let mybutton = document.getElementById("myBtn");
 
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+$("#extra").on('click',function(){
+    $(".extra-cart").toggle()
+})
+$(".add-produce").on('click',function(){
+    const value = $(this).attr("data-key");
+    // console.log(value);
+    for(let i = 0 ; i <= $(".product").length; i++){
+        const produce = $(".product")[i];
+        // console.log($(produce).attr("data-key")  );
+        if($(produce).attr("data-key") === value){
+            let newItem = $(produce).clone(true);
+            $(".extra-cart").append(newItem);
+            $(".extra-cart").append(`<div class="bb"><h3> quantity : 1</h3><h3>Cost: 20$</h3></div>`)
+            
+        console.log($(produce));
+        break;
+
+        }
+    }
+})
+$(".remove-produce").on('click',function(){
+    // const value = $(this).attr("data-key");
+    // // console.log(value);
+    // for(let i = 0 ; i <= $(".product").length; i++){
+    //     const produce = $(".product")[i];
+    //     // console.log($(produce).attr("data-key")  );
+    //     if($(produce).attr("data-key") === value){
+    //         let newItem = $(produce).clone(true);
+    //         $(".extra-cart").disAppend(newItem);
+    //     console.log($(produce));
+    //     break;
+
+    //     }
+    // }
+    console.log($(".extra-cart"));
+})
+$("#sr-address-sb").on('click',function(){
+    alert("you succeeded")
+})

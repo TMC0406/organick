@@ -8,6 +8,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    margin:  -5px 0 0 0;
 
 }
 /* .bg-img img{
@@ -600,7 +601,7 @@
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    height: 50px;
+    height: 60px;
     font-style: italic;
     border-radius: 10rem;
 }

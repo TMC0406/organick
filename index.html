@@ -10,7 +10,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
         integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        crossorigin="anonymous" referrerpolicy="#sno-referrer"></script>
     <link rel="stylesheet" href="./css/shared.css">
     <link rel="stylesheet" href="./css/home.css">
     <link rel="stylesheet" href="./css/shop.css">
@@ -20,6 +20,7 @@
 <body>
     <div class="home-page">
         <section class="extra-cart">
+            <center><h1>CART</h1></center>
 
         </section>
         <section class="login-out hide">
@@ -98,6 +99,8 @@
             </form>
         </section>
         <div class="setting">
+            <i  class="log fa-solid fa-chevron-up" onclick="topFunction()" id="myBtn" title="Go to top"></i><br>
+            <i id="extra" style="font-size: 1.7rem;" class="log fa-solid fa-cart-shopping"></i><br>
             <i class="log fa-sharp fa-solid fa-right-to-bracket" id="show-log"></i><br>
             <a href="./html/styleGuid.html" class=" set fa-solid fa-gear"></a>
         </div>
@@ -139,6 +142,11 @@
                 </div>
             </div>
         </header>
+        <marquee class="quangcao" style="padding: 3px 10px 0 ;" behavior="scroll" > 
+            Thank you for visiting 'Welcome to the Web'.By working your way
+             through this web site and taking part in the exciting challenges 
+             and activities, you will learn all about the Internet. Good luck!
+        </marquee>
         <section class="show-product hide">
             <!-- <button id="hide"><i class="fa-solid fa-xmark"></i></button> -->
         </section>
@@ -159,14 +167,14 @@
                 <button class="btn btn-right" id="next"><i class="fa-solid fa-circle-chevron-right"></i></button>
             </div>
             <div class="other-banana">
-                <div class="other-child1">
+                <div class="other-child1 skew">
                     <div class="other-text">
                         <span class="o-t1">Natural!!</span><br>
                         <span class="o-t2">Get Garden Fresh Fruits</span>
                     </div>
                     <img src="./img/otherbanner2.png" alt="">
                 </div>
-                <div class="other-child2">
+                <div class="other-child2 skew">
                     <div class="other-text">
                         <span class="o-t1" style="color: rgb(9, 255, 0);">Offer!!</span><br>
                         <span class="o-t2" style="color: rgb(0, 0, 0);">Get 10% off on Vegetables</span>
@@ -245,12 +253,12 @@
                     <h1>Our Products</h1>
                 </div>
                 <div class="shop-product">
-                    <div class="product" data-product="banana">
+                    <div class="product" data-key="1" data-product="Calabrese Broccoli">
                         <button class="btn-product">Vegetable</button>
                         <img class="prd-img" src="./img/product/Photo 0.png" alt="">
                         <div class="product-hover">
-                            <i class="fa-solid fa-plus add-cart"></i>
-                            <i class="fa-solid fa-minus remove-cart"></i>
+                            <i data-key="1" class=" add-produce fa-solid fa-plus add-cart"></i>
+                            <i data-key="1" class="remove-produce fa-solid fa-minus remove-cart"></i>
                             <i class="fa-sharp fa-solid fa-info check-info"></i>
                         </div>
                         <h3 class="name-product">Calabrese Broccoli</h3>
@@ -259,12 +267,12 @@
                             <img class="evaluate" src="./img/Star.png" alt="">
                         </div>
                     </div>
-                    <div class="product" data-product="banana">
+                    <div class="product" data-key="2" data-product="Fresh Banana Fruites">
                         <button class="btn-product">Fresh</button>
                         <img class="prd-img" src="./img/product/Photo 1.png" alt="">
                         <div class="product-hover">
-                            <i class="fa-solid fa-plus add-cart"></i>
-                            <i class="fa-solid fa-minus remove-cart"></i>
+                            <i data-key="2" class=" add-produce fa-solid fa-plus add-cart"></i>
+                            <i data-key="2" class="remove-produce fa-solid fa-minus remove-cart"></i>
                             <i class="fa-sharp fa-solid fa-info check-info"></i>
                         </div>
                         <h3 class="name-product">Fresh Banana Fruites</h3>
@@ -273,12 +281,12 @@
                             <img class="evaluate" src="./img/Star.png" alt="">
                         </div>
                     </div>
-                    <div class="product" data-product="banana">
+                    <div class="product" data-key="3" data-product="White Nuts">
                         <button class="btn-product">Millets</button>
                         <img class="prd-img" src="./img/product/Photo 2.png" alt="">
                         <div class="product-hover">
-                            <i class="fa-solid fa-plus add-cart"></i>
-                            <i class="fa-solid fa-minus remove-cart"></i>
+                            <i data-key="3" class=" add-produce fa-solid fa-plus add-cart"></i>
+                            <i data-key="3" class="remove-produce fa-solid fa-minus remove-cart"></i>
                             <i class="fa-sharp fa-solid fa-info check-info"></i>
                         </div>
                         <h3 class="name-product">White Nuts</h3>
@@ -287,12 +295,12 @@
                             <img class="evaluate" src="./img/Star.png" alt="">
                         </div>
                     </div>
-                    <div class="product" data-product="banana">
+                    <div class="product" data-key="4" data-product="Vegan Red Tomato">
                         <button class="btn-product">Vegetable</button>
                         <img class="prd-img" src="./img/product/Photo 3.png" alt="">
                         <div class="product-hover">
-                            <i class="fa-solid fa-plus add-cart"></i>
-                            <i class="fa-solid fa-minus remove-cart"></i>
+                            <i data-key="4" class=" add-produce fa-solid fa-plus add-cart"></i>
+                            <i data-key="4" class="remove-produce fa-solid fa-minus remove-cart"></i>
                             <i class="fa-sharp fa-solid fa-info check-info"></i>
                         </div>
                         <h3 class="name-product">Vegan Red Tomato</h3>
@@ -301,12 +309,12 @@
                             <img class="evaluate" src="./img/Star.png" alt="">
                         </div>
                     </div>
-                    <div class="product" data-product="banana">
+                    <div class="product" data-key="5" data-product="Mung Bean">
                         <button class="btn-product">Health</button>
                         <img class="prd-img" src="./img/product/Photo 4.png" alt="">
                         <div class="product-hover">
-                            <i class="fa-solid fa-plus add-cart"></i>
-                            <i class="fa-solid fa-minus remove-cart"></i>
+                            <i data-key="5" class=" add-produce fa-solid fa-plus add-cart"></i>
+                            <i data-key="5" class="remove-produce fa-solid fa-minus remove-cart"></i>
                             <i class="fa-sharp fa-solid fa-info check-info"></i>
                         </div>
                         <h3 class="name-product">Mung Bean</h3>
@@ -315,12 +323,12 @@
                             <img class="evaluate" src="./img/Star.png" alt="">
                         </div>
                     </div>
-                    <div class="product" data-product="banana">
+                    <div class="product" data-key="6" data-product="Brown Hazelnut">
                         <button class="btn-product">Nuts</button>
                         <img class="prd-img" src="./img/product/Photo 5.png" alt="">
                         <div class="product-hover">
-                            <i class="fa-solid fa-plus add-cart"></i>
-                            <i class="fa-solid fa-minus remove-cart"></i>
+                            <i data-key="6" class=" add-produce fa-solid fa-plus add-cart"></i>
+                            <i data-key="6" class="remove-produce fa-solid fa-minus remove-cart"></i>
                             <i class="fa-sharp fa-solid fa-info check-info"></i>
                         </div>
                         <h3 class="name-product">Brown Hazelnut</h3>
@@ -329,12 +337,12 @@
                             <img class="evaluate" src="./img/Star.png" alt="">
                         </div>
                     </div>
-                    <div class="product" data-product="banana">
+                    <div class="product" data-key="7" data-product="Eggs">
                         <button class="btn-product">Fresh</button>
                         <img class="prd-img" src="./img/product/Photo 6.png" alt="">
                         <div class="product-hover">
-                            <i class="fa-solid fa-plus add-cart"></i>
-                            <i class="fa-solid fa-minus remove-cart"></i>
+                            <i data-key="7" class=" add-produce fa-solid fa-plus add-cart"></i>
+                            <i data-key="7" class="remove-produce fa-solid fa-minus remove-cart"></i>
                             <i class="fa-sharp fa-solid fa-info check-info"></i>
                         </div>
                         <h3 class="name-product">Eggs</h3>
@@ -343,12 +351,12 @@
                             <img class="evaluate" src="./img/Star.png" alt="">
                         </div>
                     </div>
-                    <div class="product" data-product="banana">
+                    <div class="product" data-key="8" data-product="Zelco Suji Elaichi Rusk">
                         <button class="btn-product">Fresh</button>
                         <img class="prd-img" src="./img/product/Photo 7.png" alt="">
                         <div class="product-hover">
-                            <i class="fa-solid fa-plus add-cart"></i>
-                            <i class="fa-solid fa-minus remove-cart"></i>
+                            <i data-key="8" class=" add-produce fa-solid fa-plus add-cart"></i>
+                            <i data-key="8" class="remove-produce fa-solid fa-minus remove-cart"></i>
                             <i class="fa-sharp fa-solid fa-info check-info"></i>
                         </div>
                         <h3 class="name-product">Zelco Suji Elaichi Rusk</h3>
@@ -412,12 +420,12 @@
                         <button class="btn-offer">View All Product</button>
                     </div>
                     <div class="offer-child-bottom">
-                        <div class="product" data-product="banana">
+                        <div class="product" data-key="" data-product="banana">
                             <button class="btn-product">Fresh</button>
                             <img class="prd-img" src="./img/pt1.png" alt="">
                             <div class="product-hover">
-                                <i class="fa-solid fa-plus add-cart"></i>
-                                <i class="fa-solid fa-minus remove-cart"></i>
+                                <i class=" add-produce fa-solid fa-plus add-cart"></i>
+                                <i class="remove-produce fa-solid fa-minus remove-cart"></i>
                                 <i class="fa-sharp fa-solid fa-info check-info"></i>
                             </div>
                             <h3 class="name-product">Mung Bean</h3>
@@ -427,12 +435,12 @@
                                 <img class="evaluate" src="./img/Star.png" alt="">
                             </div>
                         </div>
-                        <div class="product" data-product="">
+                        <div class="product" data-key="" data-product="">
                             <button class="btn-product">Fresh</button>
                             <img class="prd-img" src="./img/pt2.png" alt="">
                             <div class="product-hover">
-                                <i class="fa-solid fa-plus add-cart"></i>
-                                <i class="fa-solid fa-minus remove-cart"></i>
+                                <i class=" add-produce fa-solid fa-plus add-cart"></i>
+                                <i class="remove-produce fa-solid fa-minus remove-cart"></i>
                                 <i class="fa-sharp fa-solid fa-info check-info"></i>
                             </div>
                             <h3 class="name-product">Brown Hazelnut</h3>
@@ -442,12 +450,12 @@
                                 <img class="evaluate" src="./img/Star.png" alt="">
                             </div>
                         </div>
-                        <div class="product" data-product="">
+                        <div class="product" data-key="" data-product="">
                             <button class="btn-product">Fresh</button>
                             <img class="prd-img" src="./img/pt3.png" alt="">
                             <div class="product-hover">
-                                <i class="fa-solid fa-plus add-cart"></i>
-                                <i class="fa-solid fa-minus remove-cart"></i>
+                                <i class=" add-produce fa-solid fa-plus add-cart"></i>
+                                <i class="remove-produce fa-solid fa-minus remove-cart"></i>
                                 <i class="fa-sharp fa-solid fa-info check-info"></i>
                             </div>
                             <h3 class="name-product">Onion</h3>
@@ -457,12 +465,12 @@
                                 <img class="evaluate" src="./img/Star.png" alt="">
                             </div>
                         </div>
-                        <div class="product" data-product="">
+                        <div class="product" data-key="" data-product="">
                             <button class="btn-product">Fresh</button>
                             <img class="prd-img" src="./img/pt4.png" alt="">
                             <div class="product-hover">
-                                <i class="fa-solid fa-plus add-cart"></i>
-                                <i class="fa-solid fa-minus remove-cart"></i>
+                                <i class=" add-produce fa-solid fa-plus add-cart"></i>
+                                <i class="remove-produce fa-solid fa-minus remove-cart"></i>
                                 <i class="fa-sharp fa-solid fa-info check-info"></i>
                             </div>
                             <h3 class="name-product">Cabbage</h3>
@@ -519,7 +527,7 @@
                         <button class="btn-blog">More News</button>
                     </div>
                     <div class="blog-container">
-                        <div class="blog-content">
+                        <div class="blog-content skew">
                             <div class="blog-date">
                                 <span class="">25 </span><br>
                                 <span>Nav</span>
@@ -532,7 +540,7 @@
                                 <button class="blog-content-btn"></button>
                             </div>
                         </div>
-                        <div class="blog-content">
+                        <div class="blog-content skew">
                             <div class="blog-date">
                                 <span class="">25 </span><br>
                                 <span>Nav</span>
@@ -542,9 +550,9 @@
                                 <span><i class="fa-solid fa-user"></i> By Rachi Card</span>
                                 <h1>Our Favourite Summertime Tommeto</h1>
                                 <p>Simply dummy text of the printing and typesetting industry. Lorem Ipsum</p>
-                                <button class="blog-content-btn"></button>
                             </div>
                         </div>
+                        <button class="blog-content-btn"></button>
                     </div>
                 </div>
             </section>
